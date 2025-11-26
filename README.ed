@@ -1,8 +1,8 @@
-# CENTAC Eligibility Verification System
+# OrthoDent
 
-![Project Status](https://img.shields.io/badge/status-Completed-green) ![Technologies](https://img.shields.io/badge/Technologies-PHP%2C%20MySQL%2C%20HTML%2C%20CSS%2C%20JS-blue)
+![Project Status](https://img.shields.io/badge/status-Completed-green) ![Technologies](https://img.shields.io/badge/Technologies-MERN-blue)
 
-**CENTAC Eligibility Verification System** is a web-based platform developed to automate **undergraduate eligibility verification** for CENTAC admissions in the U.T. of Puducherry. It simplifies the admission process and guides students toward suitable academic options based on their qualifications.
+**OrthoDent** is a web-based clinical and academic management platform developed for the Department of Orthodontics at **MGPGIDS (Govt. of Puducherry)**. It replaces manual record-keeping with a secure, efficient, and collaborative digital system.
 
 ---
 
@@ -14,55 +14,63 @@
 - [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Folder Structure](#folder-structure)
+- [API Endpoints](#api-endpoints)
 
 ---
 
 ## Project Duration
-**Jan 2023 – Jun 2023**
+**Dec 2024 – May 2025**
 
 ---
 
 ## Technologies Used
-- **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** PHP (CodeIgniter)  
-- **Database:** MySQL  
+- **Frontend:** React.js, Tailwind CSS  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **Authentication:** JWT (JSON Web Tokens)  
+- **Stack:** MERN  
 
 ---
 
 ## Features
 
-### 1. Automated Eligibility Check
-- Verifies eligibility for multiple UG courses based on **HSC subjects, marks, and personal details**.
-- Provides instant results to students.
+### 1. Student Activity Tracking
+- Track student activities, academic progress, and participation.
+- Real-time updates for faculty and students.
 
-### 2. Simplified Admission Process
-- Reduces manual work for admission authorities.
-- Streamlines the verification workflow for UG admissions.
+### 2. Patient Case Management
+- Add and manage patient case records securely.
+- Maintain detailed medical, dental, and treatment histories.
+- Manage follow-ups for ongoing treatments.
 
-### 3. Personalized Guidance
-- Suggests suitable UG courses based on the student's academic profile.
-- Helps students make informed decisions for admissions.
+### 3. Attendance Monitoring
+- Record and monitor student attendance for theory, practical, and clinical sessions.
+- Generate attendance reports and statistics per course, batch, and month.
 
-### 4. User-Friendly Interface
-- Clean and responsive interface for students and staff.
-- Simple navigation for entering and checking eligibility data.
+### 4. Real-Time Collaboration
+- Faculty and students can collaborate on case records and academic tasks.
+- Secure role-based access ensures appropriate permissions.
+
+### 5. Digital Transformation
+- Replaces paper-based manual records.
+- Improves data security, accuracy, and accessibility.
 
 ---
 
 ## Project Highlights
-- Fully automated eligibility verification system for CENTAC admissions.
-- Reduced manual errors and administrative workload.
-- Developed using **CodeIgniter MVC framework** with a MySQL database backend.
-- Scalable design suitable for future course additions.
+- Designed and implemented core modules for the Department of Orthodontics.
+- Enhanced clinical and academic workflow with automated tracking.
+- User-friendly interface built with React.js and Tailwind CSS.
+- Secure authentication and session management using JWT.
 
 ---
 
 ## Screenshots
 *Add screenshots of your project here for better visualization.*  
 
-![Home Page](path/to/homepage.png)  
-![Eligibility Check](path/to/eligibility-check.png)  
-![Results Page](path/to/results.png)  
+![Dashboard Example](path/to/dashboard.png)  
+![Patient Case Management](path/to/patient-case.png)  
+![Attendance Module](path/to/attendance.png)  
 
 ---
 
@@ -71,69 +79,67 @@
 Follow these steps to set up the project locally:
 
 1. **Clone the repository:**  
-```bash
-git clone <repository-url>
+   ```bash
+   git clone <repository-url>
 
-2. Copy the project folder to your local server directory (e.g., htdocs for XAMPP or www for WAMP).
+2. **Backend Setup:**
+   ```
+   cd backend
+   npm install
+   npm start
 
-3. Import the database:
+3. **Frontend Setup:**
+   ```
+   cd ../frontend
+   npm install
+   npm start
 
-	- Use phpMyAdmin to import the provided MySQL database file.
+4. **Environment Variables:**
+   ```
+   PORT=5000
+   MONGO_URI=<your-mongodb-connection-string>
+   JWT_SECRET=<your-secret-key>
 
-4. Configure database connection:
-
-	- Update application/config/database.php with your database credentials:
-
-	$db['default'] = array(
-  	  'hostname' => 'localhost',
-   	  'username' => 'root',
-  	  'password' => '',
-   	  'database' => 'centac_db'
-  );
-
-5. Start your local server (Apache + MySQL).
-
-6. Open the application in your browser:
-
-	```
-	http://localhost/<project-folder-name>/
+5. **Open your browser and visit:**
+   ```
+   http://localhost:3000
 
 
 ## Folder Structure
-
 ```
-CENTAC-Eligibility-System/
-├── application/
-│   ├── controllers/    # PHP controllers
-│   ├── models/         # Database models
-│   ├── views/          # HTML/PHP frontend files
-│   └── config/         # CodeIgniter config files
-├── assets/
-│   ├── css/            # Stylesheets
-│   ├── js/             # JavaScript files
-│   └── images/         # Images
-├── system/             # CodeIgniter core files
-├── index.php           # Entry point for the application
-└── README.md           # Project documentation
+OrthoDent/
+├── backend/ # Node.js & Express server
+│ ├── config/ # Configuration files (DB connection, env variables)
+│ ├── controllers/ # Request handling logic
+│ ├── middlewares/ # Middleware functions (auth, error handling)
+│ ├── models/ # Mongoose schemas/models
+│ ├── routes/ # API route definitions
+│ ├── utils/ # Utility/helper functions
+│ ├── server.js # Entry point for the backend
+│ └── package.json # Backend dependencies
+│
+├── frontend/ # React.js client
+│ ├── public/ # Public assets (index.html, favicon)
+│ ├── src/ # Source code
+│ │ ├── components/ # Reusable React components
+│ │ ├── pages/ # Page-level components
+│ │ ├── services/ # API calls and data services
+│ │ ├── hooks/ # Custom React hooks
+│ │ ├── App.js # Main App component
+│ │ └── index.js # Entry point for React
+│ └── package.json # Frontend dependencies
+│
+├── README.md # Project documentation
+└── .gitignore # Git ignore rules
 ```
 
-## License
-This project was developed for CENTAC UG admissions and is intended for educational and internal use. Not publicly licensed.
+## API Endpoints
 
-
----
-
-This README matches the **modern style of your OrthoDent README** with:  
-
-- Status and technology badges  
-- Table of contents  
-- Sections for features, highlights, screenshots, installation, and folder structure  
-- Code blocks for commands and config  
-
----
-
-If you want, I can **also add an “API Endpoints” section** in the same style, in case your system has endpoints for AJAX checks or admin features.  
-
-Do you want me to add that?
-
-
+| Method | Endpoint        | Description           |
+| ------ | --------------- | --------------------- |
+| GET    | /api/students   | Get all students      |
+| POST   | /api/students   | Add new student       |
+| GET    | /api/patients   | Get patient details   |
+| POST   | /api/patients   | Add new patient case  |
+| GET    | /api/attendance | Fetch attendance data |
+| POST   | /api/attendance | Record attendance     |
