@@ -1,71 +1,139 @@
-###################
-What is CodeIgniter
-###################
+# CENTAC Eligibility Verification System
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+![Project Status](https://img.shields.io/badge/status-Completed-green) ![Technologies](https://img.shields.io/badge/Technologies-PHP%2C%20MySQL%2C%20HTML%2C%20CSS%2C%20JS-blue)
 
-*******************
-Release Information
-*******************
+**CENTAC Eligibility Verification System** is a web-based platform developed to automate **undergraduate eligibility verification** for CENTAC admissions in the U.T. of Puducherry. It simplifies the admission process and guides students toward suitable academic options based on their qualifications.
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+---
 
-**************************
-Changelog and New Features
-**************************
+## Table of Contents
+- [Project Duration](#project-duration)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Project Highlights](#project-highlights)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Folder Structure](#folder-structure)
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+---
 
-*******************
-Server Requirements
-*******************
+## Project Duration
+**Jan 2023 – Jun 2023**
 
-PHP version 5.6 or newer is recommended.
+---
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+## Technologies Used
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** PHP (CodeIgniter)  
+- **Database:** MySQL  
 
-************
-Installation
-************
+---
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+## Features
 
-*******
-License
-*******
+### 1. Automated Eligibility Check
+- Verifies eligibility for multiple UG courses based on **HSC subjects, marks, and personal details**.
+- Provides instant results to students.
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+### 2. Simplified Admission Process
+- Reduces manual work for admission authorities.
+- Streamlines the verification workflow for UG admissions.
 
-*********
-Resources
-*********
+### 3. Personalized Guidance
+- Suggests suitable UG courses based on the student's academic profile.
+- Helps students make informed decisions for admissions.
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+### 4. User-Friendly Interface
+- Clean and responsive interface for students and staff.
+- Simple navigation for entering and checking eligibility data.
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+---
 
-***************
-Acknowledgement
-***************
+## Project Highlights
+- Fully automated eligibility verification system for CENTAC admissions.
+- Reduced manual errors and administrative workload.
+- Developed using **CodeIgniter MVC framework** with a MySQL database backend.
+- Scalable design suitable for future course additions.
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+---
+
+## Screenshots
+*Add screenshots of your project here for better visualization.*  
+
+![Home Page](path/to/homepage.png)  
+![Eligibility Check](path/to/eligibility-check.png)  
+![Results Page](path/to/results.png)  
+
+---
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository:**  
+```bash
+git clone <repository-url>
+
+2. Copy the project folder to your local server directory (e.g., htdocs for XAMPP or www for WAMP).
+
+3. Import the database:
+
+	- Use phpMyAdmin to import the provided MySQL database file.
+
+4. Configure database connection:
+
+	- Update application/config/database.php with your database credentials:
+
+	$db['default'] = array(
+  	  'hostname' => 'localhost',
+   	  'username' => 'root',
+  	  'password' => '',
+   	  'database' => 'centac_db'
+  );
+
+5. Start your local server (Apache + MySQL).
+
+6. Open the application in your browser:
+
+	```
+	http://localhost/<project-folder-name>/
+
+
+## Folder Structure
+
+```
+CENTAC-Eligibility-System/
+├── application/
+│   ├── controllers/    # PHP controllers
+│   ├── models/         # Database models
+│   ├── views/          # HTML/PHP frontend files
+│   └── config/         # CodeIgniter config files
+├── assets/
+│   ├── css/            # Stylesheets
+│   ├── js/             # JavaScript files
+│   └── images/         # Images
+├── system/             # CodeIgniter core files
+├── index.php           # Entry point for the application
+└── README.md           # Project documentation
+```
+
+## License
+This project was developed for CENTAC UG admissions and is intended for educational and internal use. Not publicly licensed.
+
+
+---
+
+This README matches the **modern style of your OrthoDent README** with:  
+
+- Status and technology badges  
+- Table of contents  
+- Sections for features, highlights, screenshots, installation, and folder structure  
+- Code blocks for commands and config  
+
+---
+
+If you want, I can **also add an “API Endpoints” section** in the same style, in case your system has endpoints for AJAX checks or admin features.  
+
+Do you want me to add that?
+
+
